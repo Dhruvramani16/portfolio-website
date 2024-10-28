@@ -1,0 +1,385 @@
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background: #191919;
+}
+
+.icons {
+  position: fixed;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 80px;
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  z-index: 100;
+  border-radius: 10px;
+  padding: 20px;
+  margin-right: 30px;
+}
+
+.icons a {
+  font-size: 35px;
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.fa-linkedin:hover {
+  color: #0077b5;
+}
+
+.navbar {
+  position: fixed;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 80px;
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  z-index: 100;
+  border-radius: 10px;
+  padding: 20px;
+  margin-left: 30px;
+}
+
+.nav {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  align-items: center;
+  height: 100px;
+}
+
+.nav a {
+  font-size: 23px;
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease, transform 0.3s ease;
+  font-family: "Paprika";
+}
+
+.nav a:hover {
+  color: #e6cc3be1;
+  transform: scale(1.1);
+  text-shadow: 0 0 10px #e6cc3be1;
+}
+
+.intro {
+  height: 100vh;
+  color: #fff;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+.intro h1 {
+  font-size: 60px;
+  margin-bottom: 15px;
+  font-family: "Merienda", cursive;
+  font-optical-sizing: auto;
+  font-weight: 300px;
+  font-style: normal;
+}
+
+.text {
+  font-weight: bold;
+  color: #e6cc3be1;
+  text-shadow: 0 0 10px #ecce22db;
+}
+.intro h1 .text,
+.tagline .text {
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 1.2;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.tagline {
+  font-size: 23px;
+  margin-bottom: 25px;
+  font-family: "Merienda", cursive;
+  font-optical-sizing: auto;
+  font-weight: 300px;
+  font-style: normal;
+}
+
+.button {
+  font-size: 17px;
+  text-decoration: none;
+  color: #191919;
+  border-radius: 20px;
+  background: linear-gradient(135deg, #ecce22db, #ffcc33);
+  padding: 15px 30px;
+  margin-top: 10px;
+  border: none;
+  font-family: "Chewy", system-ui;
+  transition: background 0.4s ease-in-out;
+}
+
+.button:hover {
+  background: linear-gradient(135deg, #0f0e0e, #2f2f2f);
+  color: #ecce22db;
+  border: 1px solid white;
+}
+
+.about {
+  padding: 50px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.about-content {
+  display: flex;
+  align-items: center;
+  gap: 100px;
+  width: 100%;
+  max-width: 1000px;
+  right: 10px;
+}
+
+.about-text h2 {
+  font-size: 28px;
+  color: white;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-bottom: 15px;
+  font-family: "Merienda", sans-serif;
+  position: relative;
+}
+
+.about-text h2::after {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 4px;
+  background-color: #e6cc3b;
+  margin-top: 8px;
+  border-radius: 2px;
+}
+
+.about-text p {
+  font-size: 18px;
+  line-height: 1.6;
+  color: white;
+  font-family: "Arial", sans-serif;
+}
+
+.about-image {
+  flex: 0 0 180px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-image img {
+  width: 380px;
+  height: 380px;
+  border-radius: 50%;
+  border: 4px solid #e6cc3b;
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+  position: relative;
+  left: 100px;
+}
+
+.about-image img:hover {
+  transform: scale(1.15) rotate(5deg);
+  box-shadow: 0 10px 25px #e6cc3b;
+}
+
+.skill-section {
+  height: 100vh;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 0;
+}
+
+.skill-heading {
+  color: white;
+  font-size: 31px;
+  font-family: "Paprika", system-ui;
+  font-weight: 400;
+  margin-bottom: 50px;
+}
+
+.skill {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 7em;
+  justify-content: center;
+  text-align: center;
+}
+
+.skill-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.python,
+.html,
+.css,
+.tailwind-css,
+.javascript,
+.opencv {
+  width: 70px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s ease;
+}
+
+.devicon-github-original {
+  font-size: 70px;
+  transition: 0.3s ease;
+  color: white;
+}
+.python:hover {
+  filter: drop-shadow(0 0 15px yellow);
+}
+.html:hover {
+  filter: drop-shadow(0 0 15px orange);
+}
+.css:hover {
+  filter: drop-shadow(0 0 15px rgb(0, 94, 255));
+}
+.tailwind-css:hover {
+  filter: drop-shadow(0 0 15px skyblue);
+}
+.javascript:hover {
+  filter: drop-shadow(0 0 15px gold);
+}
+.opencv:hover {
+  filter: drop-shadow(0 0 15px lightgreen);
+}
+.devicon-github-original:hover {
+  filter: drop-shadow(0 0 15px grey);
+}
+
+/* PROJECTS SECTION */
+.project {
+  height: 100vh;
+  position: relative;
+  margin: 4vh 10rem;
+}
+
+.title {
+  color: white;
+  font-size: 31px;
+  text-align: center;
+  margin-bottom: 2rem;
+  font-family: "Paprika", system-ui;
+  font-weight: 400;
+}
+
+.project-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+}
+
+.project-item {
+  background: #191919;
+  border-radius: 2rem;
+  text-align: center;
+  padding: 1.5rem;
+  transition: transform 300ms ease;
+  width: 400px;
+  height: 500px;
+  border: 1px solid white;
+}
+
+.project-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px grey;
+}
+
+.project-img-container {
+  height: auto;
+  overflow: hidden;
+}
+
+.project-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 1.5rem;
+}
+
+.project-title {
+  margin: 1rem 0;
+  color: rgb(255, 255, 255);
+}
+
+.project-btn {
+  color: #ffffff;
+  border-color: rgb(163, 163, 163);
+  font-size: 35px;
+  padding: 0.5rem 1rem;
+  border-radius: 1rem;
+  transition: all 300ms ease;
+}
+
+@media (max-width: 768px) {
+  .project-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .skill {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2em;
+  }
+}
+
+@media (max-width: 480px) {
+  .skill {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
